@@ -8,13 +8,17 @@ const Person = ({ name, age, hobbies }) => {
 
   return (
     <div>
-      <p>Learn some information about this person</p>
-      {ableToVote}
+      <p>Learn some information about this person:</p>
       <ul>
-        {hobbies.map(h => (
-          <li>{h}</li>
-        ))}
+        <li>Name: {name.slice(0, 6)}</li>
+        <li>Age: {age}</li>
+        <ul>
+          {hobbies.map(h => (
+            <li>{h}</li>
+          ))}
+        </ul>
       </ul>
+      {ableToVote}
     </div>
   );
 };
